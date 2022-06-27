@@ -9,19 +9,19 @@ SELECT count(*) from movies;
 
 SELECT * from movies LIMIT 10;
 
-EXPLAIN ANALYSE SELECT * FROM movies where title like 'Pirate%';
+EXPLAIN ANALYSE SELECT * FROM movies WHERE title LIKE 'Pirate%';
 
-EXPLAIN ANALYSE SELECT * FROM movies where title ilike 'Pirate%';
+EXPLAIN ANALYSE SELECT * FROM movies WHERE title ILIKE 'Pirate%';
 
-EXPLAIN ANALYSE SELECT * FROM movies where title ilike '%sea%';
+EXPLAIN ANALYSE SELECT * FROM movies WHERE title ILIKE '%sea%';
 
 CREATE INDEX movies_name_idx_0 ON movies (title);
 
-EXPLAIN ANALYSE SELECT * FROM movies where title like 'Pirate%';
+EXPLAIN ANALYSE SELECT * FROM movies WHERE title LIKE 'Pirate%';
 
-EXPLAIN ANALYSE SELECT * FROM movies where title ilike 'Pirate%';
+EXPLAIN ANALYSE SELECT * FROM movies WHERE title ILIKE 'Pirate%';
 
-EXPLAIN ANALYSE SELECT * FROM movies where title ilike '%sea%';
+EXPLAIN ANALYSE SELECT * FROM movies WHERE title ILIKE '%sea%';
 
 DROP INDEX movies_name_idx_0;
 
